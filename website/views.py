@@ -13,17 +13,17 @@ def home(request):
         user=authenticate(request,username=username,password=password)
         if user is not None:
             login(request,user)
-            messages.success(request,"Login successfull")
+            messages.success(request,"Login successful!!")
             return redirect('home')
         else:
-           messages.success(request,"Error...")
+           messages.success(request,"ERROR: Try again or Register to Login!!")
            return redirect('home')
     else:
         return render(request,'home.html',{'records':records})
 
 def User_logout(request):
      logout(request)
-     messages.success(request,"You have been logout")
+     messages.success(request,"Logout successful!!")
      return redirect('home')
 
 def User_register(request):
@@ -67,14 +67,21 @@ def delete_record(request,pk):
 def add_record(request):
      
     form=AddRecordForm(request.POST or None)
+    data = request.POST
     if request.user.is_authenticated:
         if request.method == 'POST':
+            first_name_value=data.get('first_name')
+            last_name_value=data.get('last_name')
+            email_value=data.get('email')
             if form.is_valid():
-                add_record=form.save()
-                messages.success(request,'Record added Successfully')
-                return redirect('home')
+                if record.objects.filter(first_name=first_name_value, last_name=last_name_value,email=email_value).exists():
+                        messages.success(request,"Customer record already exist, Try adding new customer record.")
+                        return redirect('home')
+                else: 
+                    add_record=form.save()
+                    messages.success(request,'Customer Record added Successfully')
+                    return redirect('home')
         return render(request,'add_record.html',{'form':form})
-
     else:
          messages.success(request,"Log in first")
          return render(request,'home')
