@@ -6,17 +6,17 @@
 
 ## App Photos
 
-![Nothing](/assets/images/login.jpeg)
+![Nothing](/photos/login.jpeg)
 *User Login page*
 
-![Move Pointer](/assets/images/Register.jpeg)
+![Move Pointer](/photos/Register.jpeg)
 *User signUp page*
 
-![Scroll UP](/assets/images/customber.jpeg)
-*Customber details page*
+![Scroll UP](/photos/customber.jpeg)
+*Customer details page*
 
-![Scroll Down](/assets/images/add_record.jpeg)
-*Adding customber details page*
+![Scroll Down](/photos/add_record.jpeg)
+*Adding customer details page*
 
 ## Technical Details
 - Demonstrated proficiency in the Django framework.
