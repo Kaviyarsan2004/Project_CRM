@@ -57,7 +57,7 @@
  ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Kaviyarsan2004/Air_mouse.git
+   git clone https://github.com/Kaviyarsan2004/Project_CRM.git
    cd Project_CRM
 2. Install dependencies:
     ```bash
