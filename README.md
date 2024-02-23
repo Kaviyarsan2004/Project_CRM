@@ -53,3 +53,21 @@
 - Enhanced skills in SQL database management (MySQL).
 - Improved understanding of remote development and deployment practices.
 
+ ## Building and running the project:
+ ### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Kaviyarsan2004/Air_mouse.git
+   cd Project_CRM
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+3. Run migrations:
+   ```bash
+    python manage.py migrate
+4. Start the development server:
+   ```bash
+    python manage.py runserver
+   
+5. Open your web browser and navigate to http://localhost:8000 to access the CRM application.
+
